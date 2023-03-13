@@ -33,7 +33,6 @@ public class CursoController {
 	
 	@Autowired
 	private S3Service s3Service;
-	
 	@GetMapping("/getlibros")
 	List<libros> getAll(){
 		return cursoRepository.findAll()
