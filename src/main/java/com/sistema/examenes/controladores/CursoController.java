@@ -24,7 +24,7 @@ import com.sistema.examenes.servicios.impl.S3Service;
 
 @RestController
 @RequestMapping("/api/cursos")
-@CrossOrigin(origins = {"http://localhost:3000"})
+@CrossOrigin(origins = {"http://localhost:4200"})
 public class CursoController {
 
 	

@@ -11,9 +11,6 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Entity
-@Data
-@NoArgsConstructor
-@RequiredArgsConstructor
 public class pedido {
 	@Id
 	@GeneratedValue
