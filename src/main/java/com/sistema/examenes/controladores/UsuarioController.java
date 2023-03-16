@@ -34,6 +34,23 @@ public class UsuarioController {
         usuarioRoles.add(usuarioRol);
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
     }
+    
+    @PostMapping("/admin")
+    public Usuario guardarUsuarioadmin(@RequestBody Usuario usuario) throws Exception{
+        usuario.setPerfil("default.png");
+        Set<UsuarioRol> usuarioRoles = new HashSet<>();
+
+        Rol rol = new Rol();
+        rol.setRolId(1L);
+        rol.setRolNombre("ADMIN");
+
+        UsuarioRol usuarioRol = new UsuarioRol();
+        usuarioRol.setUsuario(usuario);
+        usuarioRol.setRol(rol);
+
+        usuarioRoles.add(usuarioRol);
+        return usuarioService.guardarUsuario(usuario,usuarioRoles);
+    }
 
 
     @GetMapping("/{username}")
