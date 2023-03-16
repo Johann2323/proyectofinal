@@ -47,6 +47,7 @@ public class CursoController {
 	libros create(@RequestBody libros curso) {
 		 cursoRepository.save(curso);
 		 curso.setImagenURL(s3Service.getObjectUrl(curso.getImagenPhat()));
+		 curso.setImagenget(s3Service.getObjectUrl(curso.getImagenpost()));
 		 return curso;
 	}
 	
