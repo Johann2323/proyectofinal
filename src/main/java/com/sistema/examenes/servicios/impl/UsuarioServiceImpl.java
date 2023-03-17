@@ -7,6 +7,7 @@ import com.sistema.examenes.repositorios.UsuarioRepository;
 import com.sistema.examenes.servicios.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Set;
 
@@ -45,5 +46,12 @@ public class UsuarioServiceImpl implements UsuarioService {
     public void eliminarUsuario(Long usuarioId) {
         usuarioRepository.deleteById(usuarioId);
     }
+
+	@Override
+	@Transactional(readOnly = true)
+	public Iterable<Usuario> findAll() {
+		// TODO Auto-generated method stub
+		return usuarioRepository.findAll();
+	}
 
 }

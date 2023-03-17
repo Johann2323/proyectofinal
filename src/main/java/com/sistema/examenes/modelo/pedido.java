@@ -20,7 +20,6 @@ public class pedido {
 	private Integer id_libro;
 	private Date fecha_pedido;
 	private String estado;
-	private String direccion_envio;
 	private Integer total;
 	public Integer getId() {
 		return id;
@@ -51,12 +50,6 @@ public class pedido {
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
-	}
-	public String getDireccion_envio() {
-		return direccion_envio;
-	}
-	public void setDireccion_envio(String direccion_envio) {
-		this.direccion_envio = direccion_envio;
 	}
 	public Integer getTotal() {
 		return total;
