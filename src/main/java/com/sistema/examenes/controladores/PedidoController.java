@@ -21,7 +21,7 @@ import com.sistema.examenes.servicios.impl.PedidoService;
 
 
 @RestController
-@RequestMapping("/api/compra")
+@RequestMapping("/api/pedido")
 @CrossOrigin(origins = {"http://localhost:4200"})
 public class PedidoController {
 
@@ -30,19 +30,19 @@ public class PedidoController {
 	@Autowired
 	private PedidoService pedidoService;
 	
-	@GetMapping("/getcompra")
+	@GetMapping("/getpedido")
 	List<pedido> getAll(){
 		return pedidoRepository.findAll();
 	}
 	
-	@PostMapping("/crearcompra")
+	@PostMapping("/crearpedido")
 	@ResponseStatus(HttpStatus.CREATED)
 	pedido create(@RequestBody pedido pedidos) {
 		pedidoRepository.save(pedidos);
 		 return pedidos;
 	}
 	
-	@PutMapping("/editarcompra/{id}")
+	@PutMapping("/editarpedido/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public pedido editar(@RequestBody pedido pedidos, @PathVariable int id) {
 		pedido pedidoactual = pedidoService.findById(id);
@@ -53,12 +53,12 @@ public class PedidoController {
 		return pedidoService.save(pedidoactual);
 	}
 	
-	@GetMapping ("/buscarcompra/{id}")
+	@GetMapping ("/buscarpedido/{id}")
 	public pedido show(@PathVariable int id) {
 		return pedidoService.findById(id);
 	}
 	
-	@DeleteMapping("/eliminarcompra/{id}")
+	@DeleteMapping("/eliminarpedido/{id}")
 	@ResponseStatus(HttpStatus.CREATED)
 	public void eliminar(@PathVariable int id) {
 		pedidoService.deleteById(id);
