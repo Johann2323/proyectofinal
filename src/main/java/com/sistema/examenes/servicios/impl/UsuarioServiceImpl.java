@@ -50,7 +50,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	@Transactional(readOnly = true)
 	public Iterable<Usuario> findAll() {
-		// TODO Auto-generated method stub
+
 		return usuarioRepository.findAll();
 	}
 

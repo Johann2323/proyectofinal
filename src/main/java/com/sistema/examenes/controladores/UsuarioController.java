@@ -3,11 +3,13 @@ package com.sistema.examenes.controladores;
 import com.sistema.examenes.modelo.Rol;
 import com.sistema.examenes.modelo.Usuario;
 import com.sistema.examenes.modelo.UsuarioRol;
+import com.sistema.examenes.repositorios.UsuarioRepository;
 import com.sistema.examenes.servicios.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -17,6 +19,8 @@ public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
+
+    private UsuarioRepository usaerRepositori;
 
     @PostMapping("/")
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
@@ -62,5 +66,11 @@ public class UsuarioController {
     public void eliminarUsuario(@PathVariable("usuarioId") Long usuarioId){
         usuarioService.eliminarUsuario(usuarioId);
     }
+
+   @GetMapping("/getvendedores")
+    List<Usuario> getall(){
+
+        return usaerRepositori.findAll();
+   }
 
 }
