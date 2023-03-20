@@ -3,6 +3,7 @@ package com.sistema.examenes.servicios;
 import com.sistema.examenes.modelo.Usuario;
 import com.sistema.examenes.modelo.UsuarioRol;
 
+import java.util.List;
 import java.util.Set;
 
 public interface UsuarioService {
@@ -11,7 +12,7 @@ public interface UsuarioService {
 
     public Usuario obtenerUsuario(String username);
     
-    public Iterable<Usuario> findAll();
+    public List<Usuario> findAll();
 
     public void eliminarUsuario(Long usuarioId);
 }

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -49,9 +50,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Iterable<Usuario> findAll() {
+	public List<Usuario> findAll() {
 
-		return usuarioRepository.findAll();
+		return (List<Usuario>) usuarioRepository.findAll();
 	}
 
 }

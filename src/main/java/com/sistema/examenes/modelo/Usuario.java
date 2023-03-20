@@ -23,6 +23,8 @@ public class Usuario implements UserDetails {
     private String apellido;
     private String email;
     private String telefono;
+
+    private String direccion;
     private boolean enabled = true;
     private String perfil;
 
@@ -34,7 +36,7 @@ public class Usuario implements UserDetails {
 
     }
 
-    public Usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil) {
+    public Usuario(Long id, String username, String password, String nombre, String apellido, String email, String telefono, boolean enabled, String perfil, String direccion) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -42,6 +44,7 @@ public class Usuario implements UserDetails {
         this.apellido = apellido;
         this.email = email;
         this.telefono = telefono;
+        this.direccion = direccion;
         this.enabled = enabled;
         this.perfil = perfil;
     }
@@ -136,6 +139,14 @@ public class Usuario implements UserDetails {
 
     public String getPerfil() {
         return perfil;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public void setPerfil(String perfil) {

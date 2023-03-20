@@ -20,7 +20,7 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    private UsuarioRepository usaerRepositori;
+    private UsuarioRepository userRepositori;
 
     @PostMapping("/")
     public Usuario guardarUsuario(@RequestBody Usuario usuario) throws Exception{
@@ -53,6 +53,8 @@ public class UsuarioController {
         usuarioRol.setRol(rol);
 
         usuarioRoles.add(usuarioRol);
+
+        //System.out.println("Si guarda admin");
         return usuarioService.guardarUsuario(usuario,usuarioRoles);
     }
 
@@ -70,7 +72,10 @@ public class UsuarioController {
    @GetMapping("/getvendedores")
     List<Usuario> getall(){
 
-        return usaerRepositori.findAll();
+       System.out.println(usuarioService.findAll()+"si entrooooo");
+        return usuarioService.findAll();
+
    }
+
 
 }
