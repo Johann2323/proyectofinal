@@ -79,6 +79,9 @@ public class CursoController {
 	
 	@GetMapping ("/buscarxnombre/{titulo}")
 	public List<libros> show(@PathVariable String titulo) {
+		 if (titulo == null || titulo.isEmpty()) {
+		        System.out.print("Nuloooooooooooooo");
+		    }
 		return s3Service.findByTituloContains(titulo)
 				.stream()
 				.peek(curso -> curso.setImagenURL(s3Service.getObjectUrl(curso.getImagenPhat())))

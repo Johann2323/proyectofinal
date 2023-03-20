@@ -131,7 +131,10 @@ public class S3Service implements CursoService {
 	@Override
 	public List<libros> findByTituloContains(String titulo) {
 		// TODO Auto-generated method stub
-		return libroC.findByTituloContains(titulo);
+		if (titulo == null || titulo.isEmpty()) {
+	        System.out.print("no se leyo");
+	    }
+		return libroC.findAllByTituloContaining(titulo);
 	}
 
 	

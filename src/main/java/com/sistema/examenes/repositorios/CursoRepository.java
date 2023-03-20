@@ -12,6 +12,6 @@ import com.sistema.examenes.modelo.libros;
 
 @Repository
 public interface CursoRepository extends JpaRepository<libros, Integer> {
-	List<libros> findByTituloContains(String titulo);
+	List<libros> findAllByTituloContaining(String titulo);
 	
 }
