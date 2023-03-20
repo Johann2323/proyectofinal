@@ -18,6 +18,12 @@ public class compra {
 	private Integer id;
 	
 	private Integer id_pedido;
+
+	private String nombre;
+
+	private String titulo;
+
+	private double precion;
 	private Date fecha_compra;
 	private String estado;
 	private Integer total;
@@ -58,7 +64,29 @@ public class compra {
 	public void setMetodo_pago(String metodo_pago) {
 		this.metodo_pago = metodo_pago;
 	}
-	
-	
 
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public double getPrecion() {
+		return precion;
+	}
+
+	public void setPrecion(double precion) {
+		this.precion = precion;
+	}
 }

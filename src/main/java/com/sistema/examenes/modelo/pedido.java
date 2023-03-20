@@ -17,7 +17,13 @@ public class pedido {
 	private Integer id;
 	
 	private Integer id_usuario;
+
+	private String nombre;
 	private Integer id_libro;
+
+	private String titulo;
+
+	private double precion;
 	private Date fecha_pedido;
 	private String estado;
 	private Integer total;
@@ -57,7 +63,28 @@ public class pedido {
 	public void setTotal(Integer total) {
 		this.total = total;
 	}
-	
-	
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public double getPrecion() {
+		return precion;
+	}
+
+	public void setPrecion(double precion) {
+		this.precion = precion;
+	}
 }
