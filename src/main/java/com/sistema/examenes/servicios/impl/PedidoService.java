@@ -1,6 +1,7 @@
 package com.sistema.examenes.servicios.impl;
 
 import java.awt.print.Pageable;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,7 +59,7 @@ public class PedidoService implements PedidoServiceImp{
 	}
 
 	@Override
-	public pedido findByNombre(String nombre) {
+	public List<pedido> findByNombre(String nombre) {
 		return pedidoR.findByNombre(nombre);
 	}
 

@@ -66,6 +66,6 @@ public class PedidoController {
 	}
 
 	@GetMapping("buscarxnombre/{nombre}")
-	public pedido show(@PathVariable String nombre){return pedidoService.findByNombre(nombre);}
+	public List <pedido> show(@PathVariable String nombre){return pedidoService.findByNombre(nombre);}
 	
 }

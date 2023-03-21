@@ -1,6 +1,7 @@
 package com.sistema.examenes.servicios;
 
 import java.awt.print.Pageable;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -16,5 +17,5 @@ public interface PedidoServiceImp {
 	public pedido save(pedido pedido);
 	public void deleteById(Integer id);
 	public pedido findById(int id);
-	public pedido findByNombre(String nombre);
+	public List<pedido> findByNombre(String nombre);
 }
