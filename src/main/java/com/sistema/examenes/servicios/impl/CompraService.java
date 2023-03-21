@@ -1,6 +1,7 @@
 package com.sistema.examenes.servicios.impl;
 
 import java.awt.print.Pageable;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sistema.examenes.modelo.compra;
+import com.sistema.examenes.modelo.pedido;
 import com.sistema.examenes.repositorios.CompraRepository;
 import com.sistema.examenes.servicios.CompraServiceImp;
 
@@ -56,6 +58,12 @@ public class CompraService implements CompraServiceImp{
 	public void deleteById(Integer id) {
 		// TODO Auto-generated method stub
 		compraRe.deleteById(id);
+	}
+
+	@Override
+	public List<compra> findByNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return compraRe.findByNombre(nombre);
 	}
 
 
