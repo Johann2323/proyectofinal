@@ -23,7 +23,7 @@ public class pedido {
 
 	private String titulo;
 
-	private double precio;
+	private double precion;
 	private Date fecha_pedido;
 	private String estado;
 	private Integer total;
@@ -81,10 +81,10 @@ public class pedido {
 	}
 
 	public double getPrecion() {
-		return precio;
+		return precion;
 	}
 
 	public void setPrecion(double precion) {
-		this.precio = precion;
+		this.precion = precion;
 	}
 }
