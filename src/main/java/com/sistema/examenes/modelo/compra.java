@@ -1,5 +1,6 @@
 package com.sistema.examenes.modelo;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -21,9 +22,9 @@ public class compra {
 
 	private String nombre;
 
-	private String titulo;
+	private ArrayList <String> titulo;
 
-	private double precion;
+	private ArrayList <Double> precion;
 	private Date fecha_compra;
 	private String estado;
 	private Integer total;
@@ -74,19 +75,19 @@ public class compra {
 		this.nombre = nombre;
 	}
 
-	public String getTitulo() {
+	public ArrayList<String> getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
+	public void setTitulo(ArrayList<String> titulo) {
 		this.titulo = titulo;
 	}
 
-	public double getPrecion() {
+	public ArrayList<Double> getPrecion() {
 		return precion;
 	}
 
-	public void setPrecion(double precion) {
+	public void setPrecion(ArrayList<Double> precion) {
 		this.precion = precion;
 	}
 }

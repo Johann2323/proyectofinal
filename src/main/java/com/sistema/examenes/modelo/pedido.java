@@ -1,6 +1,9 @@
 package com.sistema.examenes.modelo;
 
+import java.sql.Array;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,9 +24,9 @@ public class pedido {
 	private String nombre;
 	private Integer id_libro;
 
-	private String titulo;
+	private ArrayList <String>titulo;
 
-	private double precion;
+	private ArrayList <Double> precion;
 	private Date fecha_pedido;
 	private String estado;
 	private Integer total;
@@ -72,19 +75,19 @@ public class pedido {
 		this.nombre = nombre;
 	}
 
-	public String getTitulo() {
+	public ArrayList<String> getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
+	public void setTitulo(ArrayList<String> titulo) {
 		this.titulo = titulo;
 	}
 
-	public double getPrecion() {
+	public ArrayList<Double> getPrecion() {
 		return precion;
 	}
 
-	public void setPrecion(double precion) {
+	public void setPrecion(ArrayList<Double> precion) {
 		this.precion = precion;
 	}
 }
