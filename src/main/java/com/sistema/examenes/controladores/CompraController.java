@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 
 import com.sistema.examenes.modelo.compra;
+import com.sistema.examenes.modelo.pedido;
 import com.sistema.examenes.repositorios.CompraRepository;
 import com.sistema.examenes.servicios.impl.CompraService;
 
@@ -62,5 +63,7 @@ public class CompraController {
 		compraService.deleteById(id);
 	}
 	
+	@GetMapping("buscarxnombre/{nombre}")
+	public List <compra> show(@PathVariable String nombre){return compraService.findByNombre(nombre);}
 	
 }
