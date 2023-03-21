@@ -13,6 +13,8 @@ public interface UsuarioService {
     public Usuario obtenerUsuario(String username);
     
     public List<Usuario> findAll();
+    
+    public List<Usuario> findByNombreContains(String nombre);
 
     public void eliminarUsuario(Long usuarioId);
 }
