@@ -7,5 +7,5 @@ import com.sistema.examenes.modelo.pedido;
 
 
 public interface PedidoRepository extends JpaRepository<pedido, Integer>{
-
+    public pedido findByNombre(String nombre);
 }

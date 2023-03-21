@@ -16,4 +16,5 @@ public interface PedidoServiceImp {
 	public pedido save(pedido pedido);
 	public void deleteById(Integer id);
 	public pedido findById(int id);
+	public pedido findByNombre(String nombre);
 }

@@ -64,5 +64,8 @@ public class PedidoController {
 	public void eliminar(@PathVariable int id) {
 		pedidoService.deleteById(id);
 	}
+
+	@GetMapping("buscarxnombre/{nombre}")
+	public pedido show(@PathVariable String nombre){return pedidoService.findByNombre(nombre);}
 	
 }

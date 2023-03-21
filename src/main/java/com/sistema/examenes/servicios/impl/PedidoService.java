@@ -57,6 +57,10 @@ public class PedidoService implements PedidoServiceImp{
 		return pedidoR.findById(id).orElse(null);
 	}
 
-	
+	@Override
+	public pedido findByNombre(String nombre) {
+		return pedidoR.findByNombre(nombre);
+	}
+
 
 }
