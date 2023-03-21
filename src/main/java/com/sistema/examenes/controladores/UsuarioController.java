@@ -63,6 +63,11 @@ public class UsuarioController {
     public Usuario obtenerUsuario(@PathVariable("username") String username){
         return usuarioService.obtenerUsuario(username);
     }
+    
+    @GetMapping("buscarxnombreu/{nombre}")
+    public List<Usuario> show(@PathVariable("nombre") String nombre){
+        return usuarioService.findByNombreContains(nombre);
+    }
 
     @DeleteMapping("/{usuarioId}")
     public void eliminarUsuario(@PathVariable("usuarioId") Long usuarioId){

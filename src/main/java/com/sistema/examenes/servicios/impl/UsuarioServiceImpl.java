@@ -55,4 +55,10 @@ public class UsuarioServiceImpl implements UsuarioService {
 		return (List<Usuario>) usuarioRepository.findAll();
 	}
 
+	@Override
+	public List<Usuario> findByNombreContains(String nombre) {
+		// TODO Auto-generated method stub
+		return usuarioRepository.findAllByNombreContaining(nombre);
+	}
+
 }
