@@ -22,7 +22,7 @@ public class PedidoService implements PedidoServiceImp{
 	private PedidoRepository pedidoR;
 	
 	@Override
-	@Transactional(readOnly = true)
+	@Transactional(readOnly  = true)
 	public Iterable<pedido> finAll() {
 		// TODO Auto-generated method stub
 		return pedidoR.findAll();
